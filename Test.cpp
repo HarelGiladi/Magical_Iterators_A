@@ -1,8 +1,5 @@
 #include "doctest.h"
 #include "sources/MagicalContainer.hpp"
-
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-
 #include <stdexcept>
 
 using namespace std;
