@@ -11,9 +11,13 @@ namespace ariel{
         CHECK(contr.size()==0);
 
         contr.addElement(11);
+        CHECK(contr.size()==1);
         contr.addElement(22);
+        CHECK(contr.size()==2);
         contr.addElement(33);
+        CHECK(contr.size()==3);
         contr.addElement(44);
+        CHECK(contr.size()==4);
         contr.addElement(55);
         CHECK(contr.size()==5);
         contr.addElement(66);
@@ -40,10 +44,12 @@ namespace ariel{
         contr.addElement(9);
         contr.addElement(84);
         contr.addElement(17);
+        CHECK(contr.size()==1);
         CHECK(*prime == 17);
         ++prime;
 
         contr.addElement(7);
+        CHECK(contr.size()==2);
         CHECK(*prime == 7);
         ++prime;
 
@@ -51,14 +57,15 @@ namespace ariel{
         contr.addElement( 888);
         contr.addElement(88888);
         contr.addElement(5);
+        CHECK(contr.size()==3);
         CHECK(*prime == 5);
         ++prime;
 
         contr.addElement(11);
+        CHECK(contr.size()==4);
         CHECK(*prime == 11);
         ++prime;
 
-        CHECK(contr.size()==4);
 
 
 
@@ -77,24 +84,31 @@ namespace ariel{
         CHECK_EQ(asce.begin(), asce);
         CHECK(asce == asce.begin());
         CHECK(asce == asce.end());
+        CHECK(contr.size()==0);
 
         contr.addElement(11);
+        CHECK(contr.size()==1);
         CHECK(*asce == 11);
         ++asce;
 
         contr.addElement(55);
+        CHECK(contr.size()==2);
         CHECK(*asce == 22);
         ++asce;
 
         contr.addElement(33);
+        CHECK(contr.size()==3);
         CHECK(*asce == 33);
         ++asce;
 
         contr.addElement(44);
+        CHECK(contr.size()==4);
+
         CHECK(*asce == 44);
         ++asce;
 
         contr.addElement(22);
+        CHECK(contr.size()==5);
         CHECK(*asce == 55);
         ++asce;
 
@@ -115,18 +129,20 @@ namespace ariel{
         CHECK(contr.size()==0);
 
         contr.addElement(11);
+        CHECK(contr.size()==1);
         CHECK(*side == 11);
         ++side;
 
         contr.addElement(33);
+        CHECK(contr.size()==2);
         CHECK(*side == 22);
         ++side;
 
         contr.addElement(22);
+        CHECK(contr.size()==3);
         CHECK(*side == 33);
         ++side;
 
-        CHECK(contr.size()==3);
 
 
         contr.removeElement(22);
