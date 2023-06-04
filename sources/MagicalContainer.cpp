@@ -16,10 +16,10 @@ namespace ariel{
     MagicalContainer::MagicalContainer(){}
     MagicalContainer::MagicalContainer(MagicalContainer& other){}
 
-    void MagicalContainer::addElem(int element){}
-    void MagicalContainer::removeElem(int element){}
+    void MagicalContainer::addElement(int element){}
+    void MagicalContainer::removeElement(int element){}
     int MagicalContainer::size() const{return conElems.size();  }
-    int MagicalContainer::getElem(int index){return 1;}
+    int MagicalContainer::getElement(int index){return 1;}
 
 
     class AscendingIterator;
@@ -53,8 +53,8 @@ namespace ariel{
 
 
 
-    MagicalContainer::SideCrossIterator::SideCrossIterator(const MagicalContainer& container):contr(container), lIndex(0), rIndex(container.size()), lefty(false){}
-    MagicalContainer::SideCrossIterator::SideCrossIterator(const SideCrossIterator& other):contr(other.contr), lIndex(0), rIndex(contr.size()), lefty(false){}
+    MagicalContainer::SideCrossIterator::SideCrossIterator(const MagicalContainer& container):contr(container), lIndex(0), rIndex(container.size()), TorF(false){}
+    MagicalContainer::SideCrossIterator::SideCrossIterator(const SideCrossIterator& other):contr(other.contr), lIndex(0), rIndex(contr.size()), TorF(false){}
     MagicalContainer::SideCrossIterator::~SideCrossIterator(){}
     MagicalContainer::SideCrossIterator& MagicalContainer::SideCrossIterator::operator=(const SideCrossIterator& other){return *this;}
     bool MagicalContainer::SideCrossIterator::operator==(const SideCrossIterator& other) const{return false;}

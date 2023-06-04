@@ -18,10 +18,10 @@ namespace ariel{
             MagicalContainer();
             MagicalContainer(MagicalContainer& other);
 
-            void addElem(int element);
-            void removeElem(int element);
+            void addElement(int element);
+            void removeElement(int element);
             int size() const;
-            int getElem(int index);
+            int getElement(int index);
 
             class AscendingIterator;
             class SideCrossIterator;
@@ -59,7 +59,7 @@ namespace ariel{
             const MagicalContainer& contr;
             int rIndex;
             int lIndex;
-            bool lefty;
+            bool TorF;
 
         
         public:
